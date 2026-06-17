@@ -832,6 +832,19 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
 }
 /* === END GAP SHRINK === */
 
+/* === LOGO IMAGE — header + footer === */
+.logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+/* Footer is dark — brighten the logo so it stays visible */
+.logo-img-footer {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+/* === END LOGO === */
+
 </style>
 </head>
 <body>
@@ -846,11 +859,7 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
 <header class="topbar">
   <div class="topbar-inner">
     <div class="logo" onclick="navigate('home')">
-      <svg class="logo-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-        <rect x="2.5" y="9" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="26" cy="6" r="5" fill="currentColor"/>
-      </svg>
-      <div class="logo-word">BeingAjayya</div>
+      <img src="img/beingajay-logo.png" alt="BeingAjayya" class="logo-img">
     </div>
     <nav class="primary" id="primaryNav">
       <ul>
@@ -2459,11 +2468,7 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo" style="cursor:default;">
-          <svg class="logo-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <rect x="2.5" y="9" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="26" cy="6" r="5" fill="currentColor"/>
-          </svg>
-          <div class="logo-word">BeingAjayya</div>
+          <img src="img/beingajay-logo.png" alt="BeingAjayya" class="logo-img logo-img-footer">
         </div>
         <p class="tagline">Quiet strength. Long-arc work. Platforms built to endure.</p>
       </div>

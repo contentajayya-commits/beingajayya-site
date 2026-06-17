@@ -785,6 +785,53 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
 .social-btn svg{ flex:none; }
 .pillar-cta-grid .right .social-row{ justify-content:center; }
 
+.book-cover.flagship{ grid-column:span 2; }
+.book-cover.flagship .bc-img{ aspect-ratio:16/10; }
+@media (max-width:700px){ .book-cover.flagship{ grid-column:span 1; } }
+
+/* === EYEBROW HIDE — reversible, delete this whole block to restore === */
+.eyebrow,
+.rec-eyebrow { display: none; }
+
+.manifesto-block .eyebrow,
+.cta-block .eyebrow,
+.pillar-cta .eyebrow { display: inline-flex; }
+/* === END EYEBROW HIDE === */
+
+/* === ANCHOR NODE HOVER — Dr Ajayya Kumar text → white on hover === */
+.node-anchor:hover .node-name,
+.node-anchor:hover .node-hook { fill: #ffffff; }
+/* === END ANCHOR HOVER === */
+
+/* === HEADING & QUOTE LINE BALANCE — fixes orphans like "years." alone === */
+h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
+  text-wrap: balance;
+}
+/* === END LINE BALANCE === */
+
+/* === SPACING + MANIFESTO BALANCE === */
+
+/* Breathing room between working-principle attribution and name-meaning block in the hero left column */
+.hero-name .name-meaning {
+  margin-top: 28px;
+}
+
+/* Balance the manifesto quote so long sentences don't strand a single word ("the attention.") on its own line */
+.manifesto-block .quote {
+  text-wrap: balance;
+}
+
+/* === END SPACING + MANIFESTO BALANCE === */
+
+/* === RECOGNITION → AFFILIATIONS GAP SHRINK === */
+.hero-recognition {
+  margin-bottom: 0;
+}
+.affiliations {
+  padding-top: clamp(20px, 3vw, 36px);
+}
+/* === END GAP SHRINK === */
+
 </style>
 </head>
 <body>
@@ -841,28 +888,26 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
   <div class="hero-intro reveal">
     <div class="wrap">
       <div class="intro-name-block">
-        <p class="hero-thesis">Author · Founder · Producer · Representative</p>
-        <h1 class="hb-name" id="heroName"><span class="hb-big">Dr Ajayya Kumar</span><span class="hb-rest">builds platforms at the intersection of leadership, entrepreneurship, culture, cinema and <em>human transformation.</em></span></h1>
-        <p class="roles roles-banner"><span>Books</span><span>Platforms</span><span>Films</span><span>Conversations</span><span>Institution-building</span><span>UN Representative · ECOSOC</span></p>
-      </div>
+        <p class="hero-thesis">Author · Founder · Film Producer · UN Representative</p>
+        <h1 class="hb-name" id="heroName"><span class="hb-big">Dr Ajayya Kumar</span><span class="hb-rest">builds institutions, platforms, and stories designed to <em>outlast attention.</em></span></h1>
+        <p class="roles roles-banner"><span>Books</span><span>Platforms</span><span>Films</span><span>Conversations</span></p>      </div>
       <div class="hero-intro-grid">
         <div class="hero-name">
           <div class="quote-strip">
-            <p class="q">"Build the thing that still matters in twenty years — not the thing that gets noticed today."</p>
-            <span class="a">— a working principle behind the institution</span>
-          </div>
-        </div>
-        <div class="hero-context">
-          <p class="credentials">Ajayya Kumar founded the <strong>Ajayyabharathy Foundation</strong>, has written <strong>seven books</strong>, produces films through <strong>Firefly Films</strong> and <strong>Sarvamangala</strong>, and holds a representative seat at the <strong>UN Economic and Social Council</strong> — and, above all, backs people and ideas worth building on.</p>
-          <div class="hero-recognition">
-            <span class="rec-eyebrow">Recognition</span>
-            <p>Outlook recently named him among its <strong>50 Visionary Leaders of the $5 Trillion Economy</strong>. Here, recognition is context — not the point.</p>
+            <p class="q">“Anyone can start something. The work is making it still stand in twenty years.”</p>
+            <span class="a">— the working principle</span>
           </div>
           <div class="name-meaning">
             <span class="meaning-mark">अजय्य · അജയ്യ</span>
-            <p class="meaning-line">Ajayya means “the unconquered” — not as conquest, but as the resolve to stay with slow, hard work long after the attention has moved on.</p>
+            <p class="meaning-line">Ajayya means “the unconquered,” not loud, not restless, but impossible to wear down.</p>
           </div>
         </div>
+        <div class="hero-context">
+          <p class="credentials">Ajayya Kumar founded the <strong>Ajayyabharathy Foundation</strong>, has written <strong>eight books</strong>, and produces films through his production house <strong>Firefly Films</strong> and through <strong>Sarvamangala</strong>. He holds a representative seat at the <strong>UN Economic and Social Council</strong>, and above all backs people and ideas worth building on.</p>
+          <div class="hero-recognition">
+            <span class="rec-eyebrow">Recognition</span>
+            <p>Outlook recently named him among its <strong>50 Visionary Leaders of the $5 Trillion Economy</strong>.</p>
+          </div>        </div>
       </div>
     </div>
   </div>
@@ -969,7 +1014,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           <!-- Sarvamangala (top-right) -->
           <g class="node" data-id="sarvamangala" onclick="navigate('sarvamangala')">
             <circle class="node-bg" cx="820" cy="120" r="58"/>
-            <text class="node-num" x="820" y="105">06</text>
+            <text class="node-num" x="820" y="105">08</text>
             <text class="node-name" x="820" y="123">Sarvamangala</text>
             <text class="node-hook" x="820" y="140">Culture, continuity</text>
           </g>
@@ -977,7 +1022,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           <!-- RASA (mid-right) -->
           <g class="node" data-id="rasa" onclick="navigate('rasa')">
             <circle class="node-bg" cx="820" cy="280" r="58"/>
-            <text class="node-num" x="820" y="265">05</text>
+            <text class="node-num" x="820" y="265">07</text>
             <text class="node-name" x="820" y="283">RASA</text>
             <text class="node-hook" x="820" y="300">Creative enterprise</text>
           </g>
@@ -985,7 +1030,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           <!-- PIVF (bottom-right) -->
           <g class="node" data-id="pivf" onclick="navigate('pivf')">
             <circle class="node-bg" cx="820" cy="440" r="58"/>
-            <text class="node-num" x="820" y="425">08</text>
+            <text class="node-num" x="820" y="425">06</text>
             <text class="node-name" x="820" y="443">PIVF</text>
             <text class="node-hook" x="820" y="460">Living heritage</text>
           </g>
@@ -993,7 +1038,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           <!-- Firefly Films (bottom-center) -->
           <g class="node" data-id="firefly" onclick="navigate('firefly')">
             <circle class="node-bg" cx="500" cy="500" r="58"/>
-            <text class="node-num" x="500" y="485">07</text>
+            <text class="node-num" x="500" y="485">05</text>
             <text class="node-name" x="500" y="503">Firefly</text>
             <text class="node-hook" x="500" y="520">Stories that travel</text>
           </g>
@@ -1011,42 +1056,42 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
         <div class="cm-node" onclick="navigate('foundation')">
           <span class="cm-num">01</span>
           <span class="cm-name">Foundation</span>
-          <p class="cm-hook">India-scale thinking</p>
+          <p class="cm-hook">India-scale research and public dialogue for the road to 2047</p>
         </div>
         <div class="cm-node" onclick="navigate('aarambh')">
           <span class="cm-num">02</span>
           <span class="cm-name">Aarambh</span>
-          <p class="cm-hook">Builders, beginning</p>
+          <p class="cm-hook">Backing first-generation founders, before the noise begins</p>
         </div>
         <div class="cm-node" onclick="navigate('success369')">
           <span class="cm-num">03</span>
           <span class="cm-name">Success369</span>
-          <p class="cm-hook">Disciplined growth</p>
+          <p class="cm-hook">Turning discipline into a structured way of living</p>
         </div>
         <div class="cm-node" onclick="navigate('mindful')">
           <span class="cm-num">04</span>
           <span class="cm-name">Mindful Parenting</span>
-          <p class="cm-hook">Next generation</p>
+          <p class="cm-hook">For parents, schools, and families shaping the next generation</p>
         </div>
         <div class="cm-node" onclick="navigate('rasa')">
-          <span class="cm-num">05</span>
+          <span class="cm-num">07</span>
           <span class="cm-name">RASA</span>
-          <p class="cm-hook">Creative enterprise</p>
+          <p class="cm-hook">For artists and cultural entrepreneurs building a lasting practice</p>
         </div>
         <div class="cm-node" onclick="navigate('sarvamangala')">
-          <span class="cm-num">06</span>
+          <span class="cm-num">08</span>
           <span class="cm-name">Sarvamangala</span>
-          <p class="cm-hook">Culture, continuity</p>
+          <p class="cm-hook">Classical arts and conscious cinema, preserved and carried forward</p>
         </div>
         <div class="cm-node" onclick="navigate('firefly')">
-          <span class="cm-num">07</span>
+          <span class="cm-num">05</span>
           <span class="cm-name">Firefly Films</span>
           <p class="cm-hook">Stories that travel</p>
         </div>
         <div class="cm-node" onclick="navigate('pivf')">
-          <span class="cm-num">08</span>
+          <span class="cm-num">06</span>
           <span class="cm-name">PIVF</span>
-          <p class="cm-hook">Living heritage</p>
+          <p class="cm-hook">Kerala's living heritage, carried to the world without leaving its roots</p>
         </div>
       </div>
 
@@ -1103,7 +1148,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
 
         <!-- Firefly Films: wide -->
         <div class="work-card wide" onclick="navigate('firefly')">
-          <span class="num">07 / Stories That Travel</span>
+          <span class="num">05 / Stories That Travel</span>
           <h3>Firefly Films</h3>
           <p class="hook">For stories that travel.</p>
           <p class="body">A film platform for stories with emotional intelligence, cultural depth, and the ability to move beyond the moment. The first feature, <em>Sarvam Maya</em>, was directed by Akhil Sathyan with Nivin Pauly in the lead. Producers: Ajayya Kumar and Rajeev Menon.</p>
@@ -1124,7 +1169,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
 
         <!-- RASA -->
         <div class="work-card" onclick="navigate('rasa')">
-          <span class="num">05 / Creative Enterprise</span>
+          <span class="num">07 / Creative Enterprise</span>
           <h3>RASA</h3>
           <p class="hook">For creative enterprise.</p>
           <p class="body">For artists, writers, storytellers, and architects who want their practice to become sustainable and matter.</p>
@@ -1134,7 +1179,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
 
         <!-- Sarvamangala -->
         <div class="work-card" onclick="navigate('sarvamangala')">
-          <span class="num">06 / Culture &amp; Continuity</span>
+          <span class="num">08 / Culture &amp; Continuity</span>
           <h3>Sarvamangala</h3>
           <p class="hook">For culture and continuity.</p>
           <p class="body">A home for classical arts, cultural memory, and stories worth carrying forward. Two arms — Sabha for classical practice, Productions for conscious cinema.</p>
@@ -1144,7 +1189,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
 
         <!-- PIVF -->
         <div class="work-card" onclick="navigate('pivf')">
-          <span class="num">08 / Living Heritage</span>
+          <span class="num">06 / Living Heritage</span>
           <h3>Peruvanam International Village Festival</h3>
           <p class="hook">For living heritage.</p>
           <p class="body">A festival that carries Kerala’s living heritage to a wider world without pulling it from its roots.</p>
@@ -1166,7 +1211,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
       <div class="manifesto-inner">
         <span class="eyebrow">Working Principle</span>
         <p class="quote">
-          Notice what deserves to grow.<br>Bring the right people closer.<br><span class="accent">Build the structure</span> that lets the work outlive the attention.
+          Notice what deserves to grow.<br>Bring the right people closer.<br><span class="accent">Build the structure</span> that lets<br>the work outlive the attention.
         </p>
         <p class="manifesto-coda">The work isn’t built for noise.<br>It’s built to <em>last.</em></p>
         <span class="attribution">How the work is done</span>
@@ -1181,7 +1226,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
 
         <div class="duo-col">
           <span class="eyebrow">The Library</span>
-          <h3>Seven <em>books.</em></h3>
+          <h3>Eight <em>books.</em></h3>
           <div class="book-rows reveal-stagger">
             <div class="book-tile" onclick="navigate('media')">
               <span class="bt-cover ph"><i>369</i></span>
@@ -1208,7 +1253,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
               <p>The book behind the masterclass.</p></div>
             </div>
           </div>
-          <span class="arrow" onclick="navigate('media')">All seven titles →</span>
+          <span class="arrow" onclick="navigate('media')">All eight titles →</span>
         </div>
 
         <div class="duo-col">
@@ -1379,7 +1424,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           <p><strong>Ask Ajayya</strong> is a mentorship platform built on Ajayya’s leadership principles. Submit your toughest management challenges and receive structured, personalised guidance in a mentoring dialogue.</p>
         </div>
         <div class="ask-cta-actions">
-            <a class="pillar-btn primary" href="https://www.askajayya.com/" target="_blank" rel="noopener noreferrer">Ask a question <span>→</span></a>
+            <a class="pillar-btn primary" href="https://www.askajayya.com/" target="_blank" rel="noopener noreferrer">Ask a leadership question <span>→</span></a>
             <a class="pillar-btn" href="https://www.askajayya.com/" target="_blank" rel="noopener noreferrer">Explore sessions <span>→</span></a>
           </div>
       </div>
@@ -1473,7 +1518,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
       </div>
       <div class="platform-detail reveal">
         <div class="left"><p class="num">07</p><h3>Firefly Films</h3><p class="serves">Serves: Filmmakers, cultural storytellers, audiences at scale.</p></div>
-        <div class="right"><p class="hook">For stories that travel.</p><p>A film platform for stories with emotional intelligence, cultural depth, and the ability to move beyond the moment. The first feature, <em>Sarvam Maya</em>, was directed by Akhil Sathyan with Nivin Pauly in the lead role.</p><p>Producers: Ajayya Kumar and Rajeev Menon. Firefly Films extends Ajay's work into cinema because stories can reach where speeches, essays, and rooms cannot.</p>
+        <div class="right"><p class="hook">For stories that travel.</p><p>A film platform for stories with emotional intelligence, cultural depth, and the ability to move beyond the moment. The first feature, <em>Sarvam Maya</em>, was directed by Akhil Sathyan with Nivin Pauly in the lead role.</p><p>Producers: Ajayya Kumar and Rajeev Menon. Firefly Films extends Ajayya's work into cinema because stories can reach where speeches, essays, and rooms cannot.</p>
           <button class="pillar-btn primary" onclick="navigate('firefly')" style="margin-top:24px; max-width:420px;">Enter Firefly Films <span>→</span></button></div>
       </div>
       <div class="platform-detail reveal">
@@ -1527,42 +1572,47 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
 
   <div class="bm-section reveal">
     <div class="wrap">
-      <h2>Books — <em>seven titles.</em></h2>
+      <h2>Books — <em>eight titles.</em></h2>
       <div class="books-cover-grid reveal-stagger">
-        <a class="book-cover" href="https://www.amazon.in/BUSINESS-GITA-AJAYYA-KUMAR/dp/1739143302" target="_blank" rel="noopener noreferrer">
+        <a class="book-cover flagship" href="https://businessgita.org/" target="_blank" rel="noopener noreferrer">
           <div class="bc-img" style="background-image:var(--bk-bg1);" role="img" aria-label="Business Gita cover"></div>
           <div class="bc-title">Business Gita</div>
-          <div class="bc-sub">50 Conversations, 50 Lessons</div>
+          <div class="bc-sub">50 Conversations, 50 Lessons · Visit businessgita.org</div>
         </a>
-        <a class="book-cover" href="https://amzn.in/d/c0drFpl" target="_blank" rel="noopener noreferrer">
+        <a class="book-cover flagship" href="https://shop.zerotosuccess.org/product/success-369/" target="_blank" rel="noopener noreferrer">
+          <div class="bc-img" style="background-image:url('/img/success369-cover.jpg');" role="img" aria-label="Success369 cover"></div>
+          <div class="bc-title">Success369</div>
+          <div class="bc-sub">The Success369 system, in book form · Visit zerotosuccess.org</div>
+        </a>
+        <a class="book-cover" href="https://businessgita.org/" target="_blank" rel="noopener noreferrer">
           <div class="bc-img" style="background-image:var(--bk-bg2);" role="img" aria-label="Business Gita 2.0 cover"></div>
           <div class="bc-title">Business Gita 2.0</div>
-          <div class="bc-sub">Let&rsquo;s Talk Ideas, and Work</div>
+          <div class="bc-sub">Let&rsquo;s Talk Ideas, and Work · Visit businessgita.org</div>
         </a>
-        <a class="book-cover" href="https://www.amazon.in/dp/B09LGQDRVH" target="_blank" rel="noopener noreferrer">
+        <a class="book-cover" href="https://www.amazon.in/dp/B09LD4SX8G" target="_blank" rel="noopener noreferrer">
           <div class="bc-img" style="background-image:var(--bk-films21);" role="img" aria-label="Lessons from 21 Films cover"></div>
           <div class="bc-title">Lessons from 21 Films</div>
-          <div class="bc-sub">For the 21st-Century Entrepreneur</div>
+          <div class="bc-sub">For the 21st-Century Entrepreneur · Buy on Amazon</div>
         </a>
         <a class="book-cover" href="https://www.amazon.in/Formula-G-Startup-Machine-Toolkits-Success/dp/1685234542" target="_blank" rel="noopener noreferrer">
           <div class="bc-img" style="background-image:var(--bk-formulag);" role="img" aria-label="Formula-G cover"></div>
           <div class="bc-title">Formula-G</div>
-          <div class="bc-sub">Scale Your Startup to a Growth Machine</div>
+          <div class="bc-sub">Scale Your Startup to a Growth Machine · Buy on Amazon</div>
         </a>
         <a class="book-cover" href="https://www.amazon.in/Mindful-Parenting-Guiding-Children-Success/dp/B0B64C1CWK" target="_blank" rel="noopener noreferrer">
           <div class="bc-img" style="background-image:var(--bk-mindful);" role="img" aria-label="Mindful Parenting cover"></div>
           <div class="bc-title">Mindful Parenting</div>
-          <div class="bc-sub">The Art of Guiding Children to Success</div>
+          <div class="bc-sub">The Art of Guiding Children to Success · Buy on Amazon</div>
         </a>
-        <a class="book-cover" href="https://amzn.eu/d/9iuPtzV" target="_blank" rel="noopener noreferrer">
-          <div class="bc-img ph"><span>Zero to Success in 369 Days</span></div>
+        <a class="book-cover" href="https://shop.zerotosuccess.org/" target="_blank" rel="noopener noreferrer">
+          <div class="bc-img" style="background-image:url('/img/zero-to-success-cover.png');" role="img" aria-label="Zero to Success in 369 Days cover"></div>
           <div class="bc-title">Zero to Success in 369 Days</div>
-          <div class="bc-sub">Foundation text for Success&nbsp;369 &middot; cover coming</div>
+          <div class="bc-sub">Foundation text for Success&nbsp;369 · Visit zerotosuccess.org</div>
         </a>
-        <a class="book-cover" href="https://amzn.in/d/hiyC9xD" target="_blank" rel="noopener noreferrer">
+        <a class="book-cover" href="https://www.amazon.in/Nimanjanam-Malayalam-Dr-Ajayya-Kumar-ebook/dp/B0D2P6QVHC" target="_blank" rel="noopener noreferrer">
           <div class="bc-img" style="background-image:var(--bk-nimanjanam);" role="img" aria-label="Nimanjanam cover"></div>
           <div class="bc-title">Nimanjanam</div>
-          <div class="bc-sub">Malayalam</div>
+          <div class="bc-sub">Malayalam · Buy on Amazon</div>
         </a>
       </div>
     </div>
@@ -1709,7 +1759,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
   <div class="contact-grid reveal">
     <div class="wrap">
       <div class="engage-row"><span class="num">01</span><div><h3>Pitch an idea.</h3></div><p>For founders, filmmakers, and institution-builders with something specific to put forward. Lead with the question and the work.</p></div>
-      <div class="engage-row"><span class="num">02</span><div><h3>Invite Ajay.</h3></div><p>For talks, podcast appearances, written features, or interview requests. Include scope, audience, and timing.</p></div>
+      <div class="engage-row"><span class="num">02</span><div><h3>Invite Ajayya.</h3></div><p>For talks, podcast appearances, written features, or interview requests. Include scope, audience, and timing.</p></div>
       <div class="engage-row"><span class="num">03</span><div><h3>Partnership.</h3></div><p>For institutional partners, foundations, and platforms exploring collaboration on specific work, programmes, or research.</p></div>
     </div>
   </div>
@@ -1721,7 +1771,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
            <form class="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST"> -->
       <form class="contact-form" id="contactForm" onsubmit="return submitContact(event)">
         <label class="label" for="reason">Reason</label>
-        <select id="reason" name="reason"><option value="">Select one</option><option value="pitch">Pitch an idea</option><option value="speaking">Invite Ajay · Speaking · Press</option><option value="partnership">Partnership</option><option value="other">Other</option></select>
+        <select id="reason" name="reason"><option value="">Select one</option><option value="pitch">Pitch an idea</option><option value="speaking">Invite Ajayya · Speaking · Press</option><option value="partnership">Partnership</option><option value="other">Other</option></select>
 
         <label class="label" for="area">Which area does this relate to?</label>
         <select id="area" name="area"><option value="">Select one</option><option value="foundation">Foundation / public dialogue</option><option value="founders">Founders / business</option><option value="hd">Human development</option><option value="parenting">Parenting / education</option><option value="culture">Culture / arts</option><option value="cinema">Cinema / storytelling</option><option value="festival">Festival / heritage</option><option value="unsure">Not sure</option></select>
@@ -1731,7 +1781,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
         <label class="label" for="org">Organisation (if any)</label><input type="text" id="org" name="organisation">
         <label class="label" for="msg">Tell us more</label><textarea id="msg" name="message" placeholder="Lead with the question and the work." required></textarea>
         <button type="submit">Send →</button>
-        <p class="form-alt">Prefer email? <a id="contactEmailLink" href="#">Write to Ajay directly</a></p>
+        <p class="form-alt">Prefer email? <a id="contactEmailLink" href="#">Write to Ajayya directly</a></p>
         <p class="form-note" id="contactNote" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -2281,7 +2331,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           <h2>Where speeches and rooms <em>cannot reach.</em></h2>
         </div>
         <div class="right">
-          <p>Firefly Films extends Ajay's work into cinema because stories can reach where speeches, essays, and rooms cannot.</p>
+          <p>Firefly Films extends Ajayya's work into cinema because stories can reach where speeches, essays, and rooms cannot.</p>
           <p>The platform backs films that carry emotional intelligence, cultural texture, and the patience to stay with character. The first feature, <em>Sarvam Maya</em>, was directed by Akhil Sathyan with Nivin Pauly in the lead role. Producers: Ajayya Kumar and Rajeev Menon.</p>
         </div>
       </div>
@@ -2320,7 +2370,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           <p>For audiences who haven't seen <em>Sarvam Maya</em> yet — and for filmmakers with a project that fits the editorial standard.</p>
         </div>
         <div class="right">
-          <button class="pillar-btn primary" onclick="alert('JioHotstar deep-link connects post-launch.')">Watch on JioHotstar <span>→</span></button>
+          <a class="pillar-btn primary" href="https://www.hotstar.com/in/movies/sarvam-maya/1271525191" target="_blank" rel="noopener noreferrer">Watch on JioHotstar <span>→</span></a>
           <button class="pillar-btn secondary" onclick="navigate('contact')">Pitch a project <span>→</span></button>
           <div class="social-row"><a class="social-btn" href="https://www.instagram.com/fireflyfilmsofficial" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a></div>
         </div>
@@ -2394,7 +2444,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           <p>For audiences considering attendance, partner organisations, and patrons of cultural institutions.</p>
         </div>
         <div class="right">
-          <a class="pillar-btn primary" href="https://registration.pivf.org/" target="_blank" rel="noopener noreferrer">Attend the festival <span>→</span></a>
+          <a class="pillar-btn primary" href="https://registration.pivf.org/" target="_blank" rel="noopener noreferrer">View 2026 archive <span>→</span></a>
           <a class="pillar-btn secondary" href="https://www.pivf.org/" target="_blank" rel="noopener noreferrer">Visit pivf.org <span>→</span></a>
           <div class="social-row"><a class="social-btn" href="https://www.instagram.com/pivf_litfest" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a class="social-btn" href="https://youtube.com/@peruvanamlitfest" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2l5 2.8-5 2.8z" fill="currentColor" stroke="none"/></svg><span>YouTube</span></a></div>
         </div>
@@ -2415,7 +2465,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
           </svg>
           <div class="logo-word">BeingAjayya</div>
         </div>
-        <p class="tagline">Quiet strength. Long-arc work.<br>Platforms built to endure.</p>
+        <p class="tagline">Quiet strength. Long-arc work. Platforms built to endure.</p>
       </div>
       <div class="footer-col">
         <h5>Read &amp; Listen</h5>
@@ -2443,7 +2493,7 @@ nav.primary a.nav-home .nav-home-word{ display:none; }
         <ul>
           <li><a href="https://www.askajayya.com/" target="_blank" rel="noopener noreferrer">Ask Ajayya ↗</a></li>
           <li><a onclick="navigate('contact')">Pitch an idea</a></li>
-          <li><a onclick="navigate('contact')">Invite Ajay</a></li>
+          <li><a onclick="navigate('contact')">Invite Ajayya</a></li>
           <li><a onclick="navigate('contact')">Partnership</a></li>
         </ul>
       </div>

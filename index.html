@@ -849,6 +849,12 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
 .node-name-2 { font-size: 14px; }
 /* === END TWO-LINE NODE NAMES === */
 
+/* === HERO TEXT TWEAKS === */
+.meaning-line { font-size: 18px; }
+.hero-recognition p { text-wrap: balance; }
+.rec-context { margin-top: 8px; font-size: 13px; color: var(--ink-faint); font-style: italic; }
+/* === END HERO TEXT TWEAKS === */
+
 </style>
 </head>
 <body>
@@ -901,25 +907,27 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
   <div class="hero-intro reveal">
     <div class="wrap">
       <div class="intro-name-block">
-        <p class="hero-thesis">Author · Founder · Film Producer · UN Representative</p>
+        <p class="hero-thesis">UN Representative · Author · Founder · Management Thinker · Patron of Arts &amp; Culture</p>
         <h1 class="hb-name" id="heroName"><span class="hb-big">Dr Ajayya Kumar</span><span class="hb-rest">builds institutions, platforms, and stories designed to <em>outlast attention.</em></span></h1>
         <p class="roles roles-banner"><span>Books</span><span>Platforms</span><span>Films</span><span>Conversations</span></p>      </div>
       <div class="hero-intro-grid">
         <div class="hero-name">
           <div class="quote-strip">
-            <p class="q">“Anyone can start something. The work is making it still stand in twenty years.”</p>
+            <p class="q">“Anyone can start something. The work is making it still matter twenty years from now.”</p>
             <span class="a">— the working principle</span>
           </div>
           <div class="name-meaning">
             <span class="meaning-mark">अजय्य · അജയ്യ</span>
-            <p class="meaning-line">Ajayya means “the unconquered,” not loud, not restless, but impossible to wear down.</p>
+            <p class="meaning-line">Ajayya means <strong>“the unconquered,”</strong> not loud, not restless, but impossible to wear down.</p>
           </div>
         </div>
         <div class="hero-context">
-          <p class="credentials">Ajayya Kumar founded the <strong>Ajayyabharathy Foundation</strong>, has written <strong>eight books</strong>, and produces films through his production house <strong>Firefly Films</strong> and through <strong>Sarvamangala</strong>. He holds a representative seat at the <strong>UN Economic and Social Council</strong>, and above all backs people and ideas worth building on.</p>
+          <p class="credentials">Dr Ajayya Kumar is a United Nations Representative at the <strong>United Nations Economic and Social Council</strong>, founder of <strong>Ajayyabharathy Foundation</strong>, author of <strong>eight books</strong>, and a builder of platforms across leadership, founder backing, human development, arts, culture and storytelling.</p>
+          <p class="credentials">He serves as <strong>COO of Emircom</strong> and is recognised as a management thinker, author and art curator whose work spans corporate leadership, personal transformation and social impact.</p>
           <div class="hero-recognition">
             <span class="rec-eyebrow">Recognition</span>
             <p>Outlook recently named him among its <strong>50 Visionary Leaders of the $5 Trillion Economy</strong>.</p>
+            <p class="rec-context">Recognition is context. The work is the point.</p>
           </div>        </div>
       </div>
     </div>
@@ -1242,7 +1250,7 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
           <h3>Eight <em>books.</em></h3>
           <div class="book-rows reveal-stagger">
             <div class="book-tile" onclick="navigate('media')">
-              <span class="bt-cover ph"><i>369</i></span>
+              <span class="bt-cover" style="background-image:url('/img/zero-to-success-cover.png');"></span>
               <div class="bt-body"><span class="num">I</span>
               <h4>Zero to Success in 369 Days</h4>
               <p>The discipline-as-advantage thesis. Foundation of the Success 369 IP.</p></div>

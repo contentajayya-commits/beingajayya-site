@@ -845,6 +845,10 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
 }
 /* === END LOGO === */
 
+/* === TWO-LINE NODE NAMES — slightly smaller to fit stacked in circle === */
+.node-name-2 { font-size: 14px; }
+/* === END TWO-LINE NODE NAMES === */
+
 </style>
 </head>
 <body>
@@ -991,9 +995,9 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
           <!-- Foundation (anchor institution, above) -->
           <g class="node" data-id="foundation" onclick="navigate('foundation')">
             <circle class="node-bg" cx="500" cy="78" r="58"/>
-            <text class="node-num" x="500" y="63">01</text>
-            <text class="node-name" x="500" y="81">Foundation</text>
-            <text class="node-hook" x="500" y="98">India-scale thinking</text>
+            <text class="node-num" x="500" y="59">01</text>
+            <text class="node-name node-name-2" x="500" y="76">Ajayyabharathy<tspan x="500" dy="15">Foundation</tspan></text>
+            <text class="node-hook" x="500" y="106">India-scale thinking</text>
           </g>
 
           <!-- Aarambh (top-left) -->
@@ -1015,17 +1019,17 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
           <!-- Mindful Parenting (bottom-left) -->
           <g class="node" data-id="mindful" onclick="navigate('mindful')">
             <circle class="node-bg" cx="180" cy="440" r="58"/>
-            <text class="node-num" x="180" y="425">04</text>
-            <text class="node-name" x="180" y="443">Mindful</text>
-            <text class="node-hook" x="180" y="460">Next generation</text>
+            <text class="node-num" x="180" y="421">04</text>
+            <text class="node-name node-name-2" x="180" y="438">Mindful<tspan x="180" dy="15">Parenting</tspan></text>
+            <text class="node-hook" x="180" y="468">Next generation</text>
           </g>
 
           <!-- Sarvamangala (top-right) -->
           <g class="node" data-id="sarvamangala" onclick="navigate('sarvamangala')">
             <circle class="node-bg" cx="820" cy="120" r="58"/>
-            <text class="node-num" x="820" y="105">08</text>
-            <text class="node-name" x="820" y="123">Sarvamangala</text>
-            <text class="node-hook" x="820" y="140">Culture, continuity</text>
+            <text class="node-num" x="820" y="101">08</text>
+            <text class="node-name node-name-2" x="820" y="118">Sarvamangala<tspan x="820" dy="15">Productions</tspan></text>
+            <text class="node-hook" x="820" y="148">Culture, continuity</text>
           </g>
 
           <!-- RASA (mid-right) -->
@@ -1047,9 +1051,9 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
           <!-- Firefly Films (bottom-center) -->
           <g class="node" data-id="firefly" onclick="navigate('firefly')">
             <circle class="node-bg" cx="500" cy="500" r="58"/>
-            <text class="node-num" x="500" y="485">05</text>
-            <text class="node-name" x="500" y="503">Firefly</text>
-            <text class="node-hook" x="500" y="520">Stories that travel</text>
+            <text class="node-num" x="500" y="481">05</text>
+            <text class="node-name node-name-2" x="500" y="498">Firefly<tspan x="500" dy="15">Films</tspan></text>
+            <text class="node-hook" x="500" y="528">Stories that travel</text>
           </g>
 
         </svg>
@@ -1064,7 +1068,7 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
         </div>
         <div class="cm-node" onclick="navigate('foundation')">
           <span class="cm-num">01</span>
-          <span class="cm-name">Foundation</span>
+          <span class="cm-name">Ajayyabharathy Foundation</span>
           <p class="cm-hook">India-scale research and public dialogue for the road to 2047</p>
         </div>
         <div class="cm-node" onclick="navigate('aarambh')">
@@ -1089,7 +1093,7 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
         </div>
         <div class="cm-node" onclick="navigate('sarvamangala')">
           <span class="cm-num">08</span>
-          <span class="cm-name">Sarvamangala</span>
+          <span class="cm-name">Sarvamangala Productions</span>
           <p class="cm-hook">Classical arts and conscious cinema, preserved and carried forward</p>
         </div>
         <div class="cm-node" onclick="navigate('firefly')">
@@ -1189,9 +1193,9 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
         <!-- Sarvamangala -->
         <div class="work-card" onclick="navigate('sarvamangala')">
           <span class="num">08 / Culture &amp; Continuity</span>
-          <h3>Sarvamangala</h3>
+          <h3>Sarvamangala Productions</h3>
           <p class="hook">For culture and continuity.</p>
-          <p class="body">A home for classical arts, cultural memory, and stories worth carrying forward. Two arms — Sabha for classical practice, Productions for conscious cinema.</p>
+          <p class="body">A film platform for conscious cinema — classical depth and cultural memory carried into stories worth keeping.</p>
           <p class="proof"><em>BURNING</em> · Indian Panorama, IFFI 2018</p>
           <button class="visit-btn">Enter Sarvamangala <span>→</span></button>
         </div>
@@ -1521,7 +1525,7 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
           <button class="pillar-btn primary" onclick="navigate('rasa')" style="margin-top:24px; max-width:420px;">Enter RASA <span>→</span></button></div>
       </div>
       <div class="platform-detail reveal">
-        <div class="left"><p class="num">06</p><h3>Sarvamangala</h3><p class="serves">Serves: Classical artists, literary practitioners, cultural institutions, heritage stewards.</p></div>
+        <div class="left"><p class="num">06</p><h3>Sarvamangala Productions</h3><p class="serves">Serves: Classical artists, literary practitioners, cultural institutions, heritage stewards.</p></div>
         <div class="right"><p class="hook">Eight years of institutional commitment to art.</p><p>Two banners — Sarvamangala Sabha for classical arts (affiliated to the Kerala Sangeeta Nataka Akademi), and Sarvamangala Productions for conscious cinema.</p><p>The first short under the production banner, <em>BURNING</em>, was selected to the Indian Panorama at IFFI 2018, and went on to screen at over forty festivals worldwide.</p>
           <button class="pillar-btn primary" onclick="navigate('sarvamangala')" style="margin-top:24px; max-width:420px;">Enter Sarvamangala <span>→</span></button></div>
       </div>

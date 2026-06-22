@@ -855,6 +855,13 @@ h1, h2, h3, .q, .meaning-line, .credentials, .tagline {
 .rec-context { margin-top: 8px; font-size: 13px; color: var(--ink-faint); font-style: italic; }
 /* === END HERO TEXT TWEAKS === */
 
+/* === Floating Ask Ajayya button === */
+.ask-float{ position:fixed; right:24px; bottom:24px; z-index:200; display:inline-flex; align-items:center; gap:10px; padding:14px 22px; border-radius:999px; font-family:var(--ff-body); font-size:14px; font-weight:600; letter-spacing:0.02em; background:var(--marigold); color:var(--indigo-ink); border:1px solid var(--marigold); text-decoration:none; box-shadow:0 8px 24px rgba(15,42,80,0.22); transition:.25s; cursor:pointer; }
+.ask-float:hover{ background:#fff; transform:translateY(-2px); box-shadow:0 12px 30px rgba(15,42,80,0.28); }
+.ask-float svg{ width:18px; height:18px; flex-shrink:0; }
+.ask-float span{ transition:transform .25s; }
+.ask-float:hover span{ transform:translateX(3px); }
+@media (max-width:640px){ .ask-float{ right:16px; bottom:16px; padding:12px 18px; font-size:13px; } }
 </style>
 </head>
 <body>
@@ -2774,5 +2781,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 </script>
 
+<!-- Floating Ask Ajayya button -->
+<a href="https://askajayya.com" target="_blank" rel="noopener noreferrer" class="ask-float" aria-label="Ask Ajayya">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <span>Ask Ajayya</span>
+</a>
 </body>
 </html>
